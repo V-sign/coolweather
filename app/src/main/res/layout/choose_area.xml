@@ -13,7 +13,7 @@
         android:layout_height="50dp"
         android:background="#484E61"
         android:gravity="center"
-        android:text="Hello World!"
+        tools:text="Hello World!"
         android:textColor="#fff"
         android:textSize="24sp"/>
 
