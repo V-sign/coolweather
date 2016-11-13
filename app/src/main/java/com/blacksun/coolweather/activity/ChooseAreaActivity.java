@@ -3,9 +3,9 @@ package com.blacksun.coolweather.activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
@@ -120,6 +120,7 @@ public class ChooseAreaActivity extends AppCompatActivity {
                     queryCounties();
                 } else if (mCurrentLevel == LEVEL_COUNTY) {
                     String countyCode = mCountyList.get(i).getCountyCode();
+                    Toast.makeText(ChooseAreaActivity.this,"countyCode = " + countyCode, Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(ChooseAreaActivity.this, WeatherActivity.class);
                     intent.putExtra("county_code", countyCode);
                     startActivity(intent);

@@ -9,9 +9,9 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.blacksun.coolweather.R;
-import com.blacksun.coolweather.model.County;
 import com.blacksun.coolweather.util.HttpUtil;
 import com.blacksun.coolweather.util.Utility;
 
@@ -69,6 +69,7 @@ public class WeatherActivity extends AppCompatActivity {
     private void initData() {
 
         String countyCode = getIntent().getStringExtra("county_code");
+        Toast.makeText(this,"county_code = " + countyCode, Toast.LENGTH_SHORT).show();
         if (!TextUtils.isEmpty(countyCode)) {
             // 有县级代号时就去查询天气
             mPublishText.setText("同步中...");
